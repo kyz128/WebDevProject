@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="author" content="Kimberly Zhang">
+	<meta name="keywords" content="Prantl's, bakery, pastries,">
+	<meta name="description" content="Prantl's Bakery Website">
+	<title>Prantl's Bakery</title>
+  <link rel="stylesheet" media="all" type="text/css" href="css/styles.css" />
+	<link rel= "stylesheet" media= "all" type="text/css" href= "css/bootstrap.min.css"/>
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/scripts.js" ></script>
+</head>
+<body>
+<div class= "grid">
+	<div class= "container-fluid">
+  <div class= "top-row">
+		 <div class= "col-sm-12">
+			 <a href = "index.html">
+			<img src="images/logo.png" alt= "logo" class="img-fluid"></a>
+		</div>
+	</div>
+
+	<div class="navbar">
+	<a href="about.html">About Us</a>
+	<div class="dropdown">
+		<button class="dropbtn">Our Products
+		</button>
+		<div class="dropdown-content">
+			<a href="almondtorte.html">Specialty: Burnt Almond Torte</a>
+			<a href="breakfast.html">Breakfast</a>
+			<a href="donuts.html">Donuts</a>
+			<a href="csl.html">Coffeecakes & Sweet Loaves</a>
+			<a href="pt.html">Pies & Tarts</a>
+			<a href="bp.html">Breads & Pastries</a>
+			<a href="cb.html">Cookies & Brownies</a>
+			<a href="cc.html">Cakes & Tortes</a>
+		</div>
+	</div>
+	<div class="dropdown">
+		<button class="dropbtn">Special Occasions
+		</button>
+		<div class="dropdown-content">
+			<a href="wedding.html">Weddings</a>
+			<a href="celebration.html">Celebrations</a>
+		</div>
+	</div>
+	<a href="order.html">Order Online</a>
+	<a href="contact.html">Contact Us</a>
+	<a href="internal.html">Internal</a>
+	</div>
+   <div class= "cimage-row">
+		 <div class= "col-sm-12 col-xs-12">
+			 <img class="d-block img-fluid" src="images/almond torte.jpg">
+			 <div class= "centered">Order Online</div>
+      </div></div>
+
+    <div class= "contact-content">
+      <h2>Please note that this order form is only for our Burnt Almond Torte Cakes (8"x 3")</h2>
+			<!-- horizontal line to divide notice from actual form -->
+      <hr>
+      <h1>Order Form<h1/>
+      <div class= "visitor-form"></div>
+			<!-- do nothing when form submitted -->
+      <form action="">
+			<!-- create input fields on form; 2 column structure. One for label and one for actual field -->
+			<!-- form control to style form -->
+  		<div class="form-group row">
+    	<label for="inputName" class="col-sm-2 col-form-label">Name</label>
+    	<div class="col-sm-10">
+      <input type="text" class="form-control" id="nameInput" value="">
+    	</div>
+  		</div>
+  		<div class="form-group row">
+    	<label for="addressInput" class="col-sm-2 col-form-label">Billing Address</label>
+    	<div class="col-sm-10">
+      <input type="text" class="form-control" id="addressInput" value="">
+    	</div>
+  		</div>
+  		<div class="form-group row">
+    	<label for="emailInput" class="col-sm-2 col-form-label">Email</label>
+    	<div class="col-sm-10">
+      <input type="email" class="form-control" id="emailInput" value="">
+    	</div>
+  		</div>
+  		<div class="form-group row">
+    	<label for="phoneInput" class="col-sm-2 col-form-label">Phone</label>
+    	<div class="col-sm-10">
+      <input type="text" class="form-control" id="phoneInput" value="">
+    	</div>
+  		</div>
+  		<div class="form-group row">
+    	<label for="cakeInput" class="col-sm-2 col-form-label">Number of Cakes</label>
+    	<div class="col-sm-10">
+			<!-- create dropdown for cake number input -->
+      <select class="form-control" id="cakeInput">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+        <option>10</option>
+      </select>
+    	</div>
+  		</div>
+    	<div class="form-group row">
+      <label for="locationInput" class="col-sm-2 col-form-label">Pickup Location</label>
+      <div class="col-sm-10">
+        <select class="form-control" id="locationInput">
+          <option>Shadyside</option>
+          <option>Downtown</option>
+        </select>
+      </div>
+  		</div>
+  		<div class="form-group row">
+    	<label for="dateInput" class="col-sm-2 col-form-label">Pickup Date</label>
+    	<div class="col-sm-10">
+      <input type="date" class="form-control" id="dateInput" value="">
+    	</div>
+			</div>
+			<div class="form-group row">
+  		<label for="timeInput" class="col-sm-2 col-form-label">Pickup Time</label>
+  	<div class="col-sm-10">
+    <input type="time" class="form-control" id="timeInput" value="">
+  	</div>
+		</div>
+  	</br>
+  	<div class="form-group row">
+		<!-- default submit button -->
+    <div class="col-sm-10">
+    <button type="submit" class="btn btn-default">Submit</button>
+    </div>
+  </div>
+</form>
+    </div>
+
+	<div class= "footer-row">
+		<div class= "col">
+			<div id= "icon">
+        <a href= "https://www.facebook.com/PrantlsBakery" target="_blank">
+        <img src= "images/fb.png"></a>
+        <a href= "https://twitter.com/prantlsbakery" target="_blank"><img src= "images/twitter.png"></a>
+        <a href="https://www.instagram.com/prantls_bakery/" target="_blank"><img src= "images/instagram.png"></a>
+      </div>
+			Copyright &copy; 2018 Prantls Bakery. All rights reserved.
+		</div>
+	 </div>
+	</div>
+</div>
+</body>
+</html>

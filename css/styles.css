@@ -1,0 +1,344 @@
+/* make sure covers entire page */
+html,body{
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.grid{
+  background-color: black;
+  display: flex;
+}
+
+.container-fluid{
+  width: 100%;
+  height: inherit;
+  display: block;
+}
+
+
+/* style nav bar  */
+.navbar {
+  background-color: #00a665;
+  font-family: Arial;
+  font-weight: bold;
+  margin-top: 3em;
+
+}
+
+/* style nav bar links */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+.dropdown {
+  float: left;
+}
+
+/* style dropdown buttons */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* specifies what happens when hover over nav bar */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: white;
+  color: black;
+  text-decoration: none;
+}
+
+/* style dropdown options */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  font-weight: normal;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+
+.dropdown:hover .dropdown-content {
+  background-color:white ;
+  display: block;
+}
+
+/* spacing between logo, image, content, sidebar, and footer */
+.image-row, .content .row, .cimage-row, .about-content, .footer-row,
+.products-sidebar, .contact-content #loc1, .contact-content #loc2{
+  margin-top: 20px;
+}
+
+/* decreases/increases opacity of previous slide slowly for fading effect  */
+.carousel.carousel-fade .carousel-item {
+    display: block;
+    opacity: 0;
+    transition: opacity ease-out .5s;
+}
+
+/* override any other styles; make sure current slide visible */
+.carousel.carousel-fade .carousel-item.active {
+    opacity: 1 !important;
+}
+
+/* style center image and text right underneath nav bar */
+.cimage-row{
+  position: relative;
+  text-align: center;
+  font-family: Arial;
+  font-size: 72px;
+  font-style: oblique;
+  color: white;
+}
+
+.centered{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* style content for index.html page */
+.content{
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+.content h2{
+  font-family: Arial;
+  text-align: center;
+  color: #00a665;
+  font-style: oblique;
+  font-weight: bold;
+}
+
+/* style content for about.html */
+.about-content{
+  margin-left: 20px;
+  margin-right: 20px;
+  font-family: inherit;
+  color: white;
+}
+
+/* horizontal line white */
+hr{
+  background-color: white;
+}
+
+/* style the content to the right of the sidebar */
+#sidebar-content{
+  color: white;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+/* use circles for unordered lists */
+#sidebar-content ul{
+  list-style-type: circle;
+}
+
+/* style menu items table */
+#sidebar-content table{
+  border: 1px solid #dddddd;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* style wedding.html image link */
+#sidebar-content .wedding-review{
+  text-align: center;
+  vertical-align: middle;
+  color: #00a665;
+  font-weight: bold;
+}
+
+/* style table data and header of menu items table */
+#sidebar-content td, th {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 4px;
+}
+
+/* alternate row colors in menu table */
+#sidebar-content tr:nth-child(even){
+    background-color: #ddd;
+    color: #00a665;
+}
+
+/* any links in sidebar content yellow */
+#sidebar-content a{
+  color: yellow;
+}
+
+/* use roman numerals for ordered lists organization */
+#sidebar-content ol{
+  list-style-type: upper-roman;
+}
+/* style ordered list item titles */
+#sidebar-content ol li{
+  color: #00a665;
+  font-weight: bold;
+}
+
+/* style the green menu heading on products page */
+.menu-top h1{
+vertical-align: middle;
+text-align: center;
+color: #00a665;
+font-style: oblique;
+}
+/* style the two pictures that sandwitch the menu heading */
+.p1 {
+float: left;
+}
+.p2{
+  float: right;
+}
+
+/* style the sidebar menu */
+.vertical-menu{
+  margin-left: 3em;
+}
+.vertical-menu a {
+    background-color: #ddd;
+    color: black;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc;
+    text-decoration: none;
+    color: #00a665;
+}
+
+.vertical-menu a.active {
+    background-color: #00a665;
+    color: white;
+}
+
+.contact-content{
+  color:white;
+  margin-top: 5em;
+}
+
+/* style table containing store info */
+.contact-content table{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+}
+
+
+.contact-content th, td{
+  border: 3px solid white;
+}
+
+/* alternate table row colors */
+.contact-content tr:nth-child(even) {
+  background-color: #00a665;
+  color:black;
+}
+
+.contact-content table td{
+  text-align: center;
+}
+
+/* change link color depending on table row number */
+.contact-content tr:nth-child(even) a{
+  color: black;
+}
+.contact-content tr:nth-child(odd) a{
+  color: white;
+}
+
+.contact-content h2{
+  color: #00a665;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* style Google maps  */
+.contact-content iframe{
+  max-width: 400px;
+  max-height: 400px;
+  height: 400px;
+  width: auto;
+}
+
+/* put space between stores table and center them*/
+.contact-content #loc1, .contact-content #loc2{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* style visitor form */
+.contact-content form{
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  font-weight: normal;
+}
+
+/* style line about form required fields */
+.contact-content p{
+  font-size: 15px;
+  font-style: italic;
+  font-weight: normal;
+  color: yellow;
+  margin-left: 20px;
+}
+
+
+.internal-content h1{
+ color: white;
+}
+
+/* style graphs on internal use page; put space between graphs */
+.internal-content #locSales, .internal-content #catSales,
+ .internal-content #yearSales{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* style footer */
+div .footer-row{
+  color: white;
+  text-align: center;
+  background-color: #00a665;
+}

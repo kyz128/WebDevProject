@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- import the necessary files and define html info -->
+	<meta charset="utf-8" />
+	<meta name="author" content="Kimberly Zhang">
+	<meta name="keywords" content="Prantl's, bakery, pastries,">
+	<meta name="description" content="Prantl's Bakery Website">
+	<title>Prantl's Bakery</title>
+  <link rel="stylesheet" media="all" type="text/css" href="css/styles.css" />
+	<link rel= "stylesheet" media= "all" type="text/css" href= "css/bootstrap.min.css"/>
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/scripts.js" ></script>
+</head>
+<body>
+
+<!-- create grid structure -->
+<div class= "grid">
+	<div class= "container-fluid">
+
+	<!-- top row containing the logo -->
+  <div class= "top-row">
+		 <div class= "col-sm-12 col-xs-12">
+			 <a href= "index.html">
+			 <img src="images/logo.png" alt= "logo" class="img-fluid"></a>
+		 </div>
+  </div>
+	<!-- nav bar -->
+	<div class="navbar">
+	<a href="about.html">About Us</a>
+	<div class="dropdown">
+		<!-- create dropdown menu for our products -->
+		<button class="dropbtn">Our Products</button>
+		<div class="dropdown-content">
+			<a href="almondtorte.html">Specialty: Burnt Almond Torte</a>
+			<a href="breakfast.html">Breakfast</a>
+			<a href="donuts.html">Donuts</a>
+			<a href="csl.html">Coffeecakes & Sweet Loaves</a>
+			<a href="pt.html">Pies & Tarts</a>
+			<a href="bp.html">Breads & Pastries</a>
+			<a href="cb.html">Cookies & Brownies</a>
+			<a href="cc.html">Cakes & Tortes</a>
+		</div>
+	</div>
+	<!-- create dropdown menu for special occasions -->
+	<div class="dropdown">
+		<button class="dropbtn">Special Occasions
+		</button>
+		<div class="dropdown-content">
+			<a href="wedding.html">Weddings</a>
+			<a href="celebration.html">Celebrations</a>
+		</div>
+	</div>
+	<a href="order.html">Order Online</a>
+	<a href="contact.html">Contact Us</a>
+	<a href="internal.html">Internal</a>
+	</div>
+
+<!-- Slideshow -->
+ <div class= "image-row">
+		 <div class= "col-sm-12 col-xs-12">
+			 <!-- define fading effect of images; change image every 2000 ms -->
+			<div id="carousel-fade" class="carousel carousel-fade" data-ride="carousel" data-interval="2000">
+				<!-- Add lines at bottom to show number of slides and which one currently on -->
+			<ol class="carousel-indicators">
+					<li data-target="#carousel-fade" data-slide-to="0" class="active"></li>
+					<li data-target="#carousel-fade" data-slide-to="1"></li>
+					<li data-target="#carousel-fade" data-slide-to="2"></li>
+					<li data-target="#carousel-fade" data-slide-to="3"></li>
+					<li data-target="#carousel-fade" data-slide-to="4"></li>
+			</ol>
+			<!-- Add slides to carousel -->
+			<div class="carousel-inner embed-responsive embed-responsive-16by9">
+				<div class="carousel-item embed-responsive-item active">
+					<img src="images/slide1.jpg" alt="First slide image" class="img-fluid">
+				</div>
+
+				<div class="carousel-item embed-responsive-item">
+					<img src="images/slide2.jpg" alt="Second slide image" class="img-fluid">
+				</div>
+
+				<div class="carousel-item embed-responsive-item">
+					<img src="images/slide3.jpg" alt="Third slide image" class="img-fluid">
+			</div>
+
+			<div class="carousel-item embed-responsive-item">
+				<img src="images/slide4.jpg" alt="Fourth slide image" class="img-fluid">
+		</div>
+
+		<div class="carousel-item embed-responsive-item">
+			<img src="images/slide5.jpg" alt="Fifth slide image" class="img-fluid">
+	</div>
+		<!-- add previous and next buttons to slideshow -->
+			<a class="carousel-control-prev" href="#carousel-fade" role="button" data-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+			</a>
+			<a class="carousel-control-next" href="#carousel-fade" role="button" data-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+			</a>
+	</div>
+</div>
+</div>
+
+<!-- two rows of product categories; clickable images  -->
+<div class= "content">
+	<p><h2>Order now from our 100+ sinful sweets</h2></p>
+	<div class= "row">
+		<div class= "col-sm-3 col-xs-3">
+			<a href= "almondtorte.html">
+			<img src="images/AT.jpg" alt="almond torte" class= "img-fluid"></a>
+			<p> Specialty: Burnt Almond Torte</P>
+		</div>
+		<div class= "col-sm-3 col-xs-3">
+			<a href= "breakfast.html">
+			<img src= "images/BS.jpg" alt= "breakfast" class="img-fluid"></a>
+			<p> Breakfast</P>
+		</div>
+		<div class= "col-sm-3 col-xs-3">
+			<a href= "donuts.html">
+			<img src= "images/D.jpg" alt= "donut" class="img-fluid"></a>
+			<p> Donuts</P>
+		</div>
+		<div class= "col-sm-3 col-xs-3">
+			<a href= "csl.html">
+			<img src= "images/CC.jpg" alt= "coffeecake and sweet loaves" class="img-fluid"></a>
+			<p> Coffeecakes & Sweet Loaves</P>
+		</div>
+	</div>
+
+	<div class= "row">
+		<div class= "col-sm-3 col-xs-3">
+			<a href= "pt.html">
+			<img src= "images/T.jpg" alt="pies and tart" class="img-fluid"> </a>
+			<p> Pies & Tarts </P>
+		</div>
+		<div class= "col-sm-3 col-xs-3">
+			<a href= "bp.html">
+			<img src= "images/P.jpg" alt="pastries" class="img-fluid"></a>
+			<p> Breads & Pastries</P>
+		</div>
+		<div class= "col-sm-3 col-xs-3">
+			<a href= "cb.html">
+			<img src="images/BR.jpg" alt="cookies and brownies" class= "img-fluid"> </a>
+			<p> Cookies & Brownies</P>
+		</div>
+		<div class= "col-sm-3 col-xs-3">
+			<a href= "cc.html">
+			<img src= "images/CT.jpg" alt="cake and torte" class="img-fluid"></a>
+			<p> Cakes & Tortes</P>
+		</div>
+	</div>
+</div>
+
+<!-- add copyright info and social media links -->
+	<div class= "footer-row">
+		<div class= "col-sm-12 col-xs-12">
+			<div id= "icon">
+        <a href= "https://www.facebook.com/PrantlsBakery" target="_blank">
+        <img src= "images/fb.png"></a>
+        <a href= "https://twitter.com/prantlsbakery" target="_blank"><img src= "images/twitter.png"></a>
+        <a href="https://www.instagram.com/prantls_bakery/" target="_blank"><img src= "images/instagram.png"></a>
+      </div>
+			Copyright &copy; 2018 Prantls Bakery. All rights reserved.
+		</div>
+	 </div>
+	</div>
+</div>
+</body>
+</html>

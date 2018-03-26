@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="author" content="Kimberly Zhang">
+	<meta name="keywords" content="Prantl's, bakery, pastries,">
+	<meta name="description" content="Prantl's Bakery Website">
+	<title>Prantl's Bakery</title>
+  <link rel="stylesheet" media="all" type="text/css" href="css/styles.css" />
+	<link rel= "stylesheet" media= "all" type="text/css" href= "css/bootstrap.min.css"/>
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/scripts.js" ></script>
+  <script src="http://code.highcharts.com/highcharts.js"></script>
+ <script src= "http://code.highcharts.com/modules/exporting.js"></script>
+
+<!-- js code for highcharts generation -->
+ <script type= "text/javascript">
+ $(function(){
+ $('#locSales').highcharts({
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Monthly Average Sales by Location'
+    },
+
+    xAxis: {
+        categories: [
+            'Jan',
+            'Feb',
+            'Mar',
+            'Apr',
+            'May',
+            'Jun',
+            'Jul',
+            'Aug',
+            'Sep',
+            'Oct',
+            'Nov',
+            'Dec'
+        ],
+        crosshair: true
+    },
+    yAxis: {
+        title: {
+            text: 'Sales ($)'
+        }
+    },
+    tooltip: {
+        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:0"><b>${point.y:.1f}</b></td></tr>',
+        footerFormat: '</table>',
+        shared: true,
+        useHTML: true
+    },
+    plotOptions: {
+        column: {
+            pointPadding: 0.2,
+            borderWidth: 0
+        }
+    },
+    series: [{
+        name: 'Shadyside',
+        data: [12049.9, 18871.5, 12106.4, 12129.2, 15144.0, 17176.0, 12135.6, 13148.5, 12216.4, 17994.1, 11295.6, 19054.4]
+
+    },  {
+        name: 'Downtown',
+        data: [15142.4, 11533.2, 14834.5, 16339.7, 11852.6, 11775.5, 11957.4, 14160.4, 15647.6, 13129.1, 12446.8, 13651.1]
+
+    }]
+});
+});
+ </script>
+ <script type= "text/javascript">
+ $(function(){
+ $('#catSales').highcharts({
+   chart: {
+           plotBackgroundColor: null,
+           plotBorderWidth: null,
+           plotShadow: false,
+           type: 'pie'
+       },
+       title: {
+           text: '2017 Average Sales by Product Category'
+       },
+       tooltip: {
+           pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+       },
+       plotOptions: {
+           pie: {
+               allowPointSelect: true,
+               cursor: 'pointer',
+               dataLabels: {
+                   enabled: false
+               },
+               showInLegend: true
+           }
+       },
+       series: [{
+           name: 'Percentage of total sales',
+           colorByPoint: true,
+           data: [{
+               name: 'Breakfast',
+               y: 11.23,
+               sliced: true,
+               selected: true
+           }, {
+               name: 'Donuts',
+               y: 11.84
+           }, {
+               name: 'Coffeecakes & Sweet Loaves',
+               y: 10.85
+           }, {
+               name: 'Pies & Tarts',
+               y: 13.67
+           }, {
+               name: 'Breads & Pastries',
+               y: 14.18
+           }, {
+               name: 'Cookies & Brownies',
+               y: 17.05},
+                {
+               name: 'Cakes & Tortes',
+               y: 21.18
+
+           }]
+       }]
+   });
+});
+ </script>
+ <script type= "text/javascript">
+ $(function(){
+ $('#yearSales').highcharts({
+   chart: {
+        type: 'area'
+    },
+    title: {
+        text: 'Product Sales Over Time'
+    },
+    xAxis: {
+        allowDecimals: false,
+        labels: {
+            formatter: function () {
+                return this.value;
+            }
+        }
+    },
+    yAxis: {
+        title: {
+            text: 'Sales ($)'
+        },
+        labels: {
+            formatter: function () {
+                return this.value / 1000 + 'k';
+            }
+        }
+    },
+    tooltip: {
+        pointFormat: '{series.name} generated <b>{point.y:,.0f}</b><br/>of revenue in {point.x}'
+    },
+    plotOptions: {
+        area: {
+            pointStart: 1940,
+            marker: {
+                enabled: false,
+                symbol: 'circle',
+                radius: 2,
+                states: {
+                    hover: {
+                        enabled: true
+                    }
+                }
+            }
+        }
+    },
+    series: [{
+        name: 'Burnt Almond Torte',
+        data: [
+            null, null, null, null, null, 26, 711, 832, 6110, 2235,
+            5369, 7640, 91005, 21436,
+            32063, 23057, 64618, 96444, 49822, 815468,
+            120434, 324126, 62387, 429459, 341056, 531982, 132040, 431233, 229224, 727342,
+            226662, 626956, 827912, 428999, 228965, 727826, 225579, 325722, 724826, 324605,
+            524304, 323464, 423708, 254099, 924357, 224237, 724401, 424344, 523586, 722380,
+            521004, 417287, 514747, 813076, 612555, 512144, 611009, 410950, 120871, 105824,
+            510577, 710527,
+            910475, 610421, 107358, 150295, 101404, 99164, 96240, 93226,
+            51143, 55113, 74954, 48204, 47651, 47917, 43648, 40168
+        ]
+    }, {
+        name: 'Chocolate Decadence',
+        data: [null, null, null, null, null, null, null, null, null, null,
+            35, 525, 470, 1207, 1550, 2200, 4246, 6620, 8469, 12060,
+            17605, 24471, 33222, 42738, 52221, 61759, 74089, 83439, 923399, 105348,
+            116423, 130492, 144748, 157915, 179385, 190545, 213205, 230144, 252393, 257935,
+            300672, 320749, 339652, 358404, 437431, 389197, 455000, 643000, 451000, 739000,
+            837000, 355000, 337000, 631000, 429000, 527000, 725000, 824000, 723000, 622000,
+            291000, 420000, 159000, 178000, 518000, 917000, 616000, 315537, 614162, 182787,
+            512600, 411400, 65500, 47512, 46502, 74502, 48500, 49500
+        ]
+    },
+    {
+        name: 'Poured Egg',
+        data: [
+            null, null, null, null, null, 36, 118, 329, 1170, 2535,
+            3693, 6540, 13005, 14336, 72063, 43057, 54618, 67444, 98922, 154468,
+            204534, 724126, 52737, 278949, 27156, 219382, 324040, 312353, 292254, 273342,
+            266762, 269856, 279152, 288999, 289765, 275826, 257579, 254722, 248226, 246605,
+            243704, 234684, 263708, 240499, 224357, 242377, 248401, 244344, 235586, 223680,
+            721004, 172887, 147647, 135076, 612555, 212144, 411009, 510950, 610871, 810824,
+            610577, 510527, 710475, 910421, 1010358, 710295, 810104, 99194, 98620, 97326,
+            15113, 85113, 94954, 94804, 84761, 144717, 94368, 94018
+        ]
+    }]
+});
+});
+ </script>
+</head>
+<body>
+<div class= "grid">
+	<div class= "container-fluid">
+  <div class= "top-row">
+		 <div class= "col-sm-12">
+			 <a href = "index.html">
+			<img src="images/logo.png" alt= "logo" class="img-fluid"></a>
+		</div>
+	</div>
+
+	<div class="navbar">
+	<a href="about.html">About Us</a>
+	<div class="dropdown">
+		<button class="dropbtn">Our Products
+		</button>
+		<div class="dropdown-content">
+			<a href="almondtorte.html">Specialty: Burnt Almond Torte</a>
+			<a href="breakfast.html">Breakfast</a>
+			<a href="donuts.html">Donuts</a>
+			<a href="csl.html">Coffeecakes & Sweet Loaves</a>
+			<a href="pt.html">Pies & Tarts</a>
+			<a href="bp.html">Breads & Pastries</a>
+			<a href="cb.html">Cookies & Brownies</a>
+			<a href="cc.html">Cakes & Tortes</a>
+		</div>
+	</div>
+	<div class="dropdown">
+		<button class="dropbtn">Special Occasions
+		</button>
+		<div class="dropdown-content">
+			<a href="wedding.html">Weddings</a>
+			<a href="celebration.html">Celebrations</a>
+		</div>
+	</div>
+	<a href="order.html">Order Online</a>
+	<a href="contact.html">Contact Us</a>
+	<a href="internal.html">Internal</a>
+	</div>
+   <div class= "cimage-row">
+		 <div class= "col-sm-12 col-xs-12">
+			 <img class="d-block img-fluid" src="images/internal.jpg">
+			 <div class= "centered">Internal Use</div>
+      </div></div>
+<!-- 3 div containers for 3 graphs -->
+    <div class= "internal-content">
+      <h1>Sales Data</h1>
+      <hr>
+      <div id= "locSales">
+      </div>
+      <div id= "catSales">
+      </div>
+      <div id= "yearSales">
+      </div>
+    </div>
+	<div class= "footer-row">
+		<div class= "col">
+			<div id= "icon">
+        <a href= "https://www.facebook.com/PrantlsBakery" target="_blank">
+        <img src= "images/fb.png"></a>
+        <a href= "https://twitter.com/prantlsbakery" target="_blank"><img src= "images/twitter.png"></a>
+        <a href="https://www.instagram.com/prantls_bakery/" target="_blank"><img src= "images/instagram.png"></a>
+      </div>
+			Copyright &copy; 2018 Prantls Bakery. All rights reserved.
+		</div>
+	 </div>
+	</div>
+</div>
+</body>
+</html>
