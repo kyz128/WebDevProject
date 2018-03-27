@@ -189,7 +189,7 @@ hr{
 /* alternate row colors in menu table */
 #sidebar-content tr:nth-child(even){
     background-color: #ddd;
-    color: #00a665;
+    color: black;
 }
 
 /* any links in sidebar content yellow */
